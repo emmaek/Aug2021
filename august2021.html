@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+ 
+<div class="container">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/august%202021.css"/>
+<link rel="stylesheet"href="https://use.typekit.net/sly3qng.css">
+    <h1>
+        IS IT AUGUST 1ST YET??
+    </h1>
+    <h2>
+        a very important countdown
+    </h2>
+</head>
+
+    
+<body>
+<!-- CHANGING MESSAGE -->      
+    <script>
+        function setHeader(){
+            var d1 = today = new Date();
+            var d2 = new Date("Aug 1, 2021 00:00:00");
+            var header = document.getElementById("header");
+            if(d1 > d2){
+                header.innerHTML = "YES!!<br>🎉🎉🎉🎉🎉🎉"
+            } else {
+                header.innerHTML = "T-MINUS:"
+            }
+        }
+    </script>
+    <body onload="setHeader()">
+    <h3  id="header" class="loginhead"></h3>
+    </body>    
+   
+    
+<!-- COUNTDOWN -->
+<div class="center"></div>
+<div data-countdown="countdown"></div>
+<p id="countdown"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 1, 2021 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If countdown is finished
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "wooooooooo";
+  }
+}, 1000);
+</script>
+  
+    
+<!-- LINK -->
+<div id="link-container">
+    <a href="https://youtu.be/GBKqYE0h8jg?t=5" id="link" target="_blank">(p.s. click me 😎)
+    </a>
+</div>
+    
+    
+<!-- BG COLOR CHANGE -->
+  <style>
+    .bfaug {
+      background-color: #BFFFE8;
+    } 
+    .aug {
+      background-color: #FEFF91;
+    }
+  </style>
+    
+  <script>
+    setInterval(change_background, 1000 * 60);
+    function change_background() {
+      var d1 = today = new Date();
+      var d2 = new Date("Aug 1, 2021 00:00:00");
+      if(d1 > d2){
+        document.body.className = "aug";
+      }
+        else {
+        document.body.className = "bfaug";
+      }
+    }
+    change_background();
+  </script>
+      
+<!-- CONFETTI TEST FOR LATER
+<script src="../august%25202021/confettitest.js"></script> -->
+
+</body>    
+
+    
+<footer>
+    <div class="footer">
+    <p>©Emma 2021 LOL</p>
+    </div>
+</footer>
+    </div>
+
+    
+</html>
